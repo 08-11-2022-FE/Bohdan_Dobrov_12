@@ -1,0 +1,217 @@
+.container {
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.architecture-grid, .still-life-grid, .portrait-grid {
+    margin-top: 80px;
+}
+
+.architecture-container, .still-life-container, .portrait-container {
+    padding-top: 120px;
+}
+
+.title {
+    font-family: 'Delius Unicase', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 45px;
+}
+
+/* Architectural Photography */
+.architecture-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.tower {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.evening-city {
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+.sun-city {
+    grid-area: 2 / 1 / 3 / 3;
+}
+
+.cathedral {
+    grid-area: 2 / 3 / 3 / 4; 
+}
+
+.night-city {
+    grid-area: 3 / 1 / 4 / 2;
+}
+.bridge {
+    grid-area: 3 / 2 / 4 / 4;
+}
+
+.architecture-grid__item {
+    position: relative;
+}
+
+.architecture-grid__hidden-img {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    visibility: hidden;
+}
+
+.hidden-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: white;
+    position: relative;
+    opacity: 0.7;
+}
+
+.hidden-image__center {
+    position: absolute;               
+    top: 50%; 
+    left: 50%;                        
+    transform: translate(-50%, -50%)
+}
+
+.architecture-grid__item:hover .architecture-grid__hidden-img {
+    visibility: visible;
+}
+
+.hidden-image:hover{
+    opacity: 1;
+    border-radius: 50%;
+}
+
+.img {
+    border-radius: 20px;
+    opacity: 0.7;
+}
+
+.architecture-grid__item:hover .img{
+    opacity: 1;
+}
+
+.architecture-grid__text {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 23px;
+}
+    
+
+.text__paragraph {
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.text__time {
+    font-weight: 400;
+    color: #E0E0E0;
+}
+
+/* Still Life Photography */
+.still-life-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.waterfall {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.sea {
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+.small-mountain {
+    grid-area: 2 / 1 / 4 / 3;
+}
+
+.sunset {
+    grid-area: 2 / 3 / 4 / 4;
+}
+
+.field {
+    grid-area: 4 / 1 / 5 / 3;
+}
+
+.tree {
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+/* Portrait and Fashion Photography */
+.portrait-container {
+    padding-bottom: 120px;
+}
+
+.portrait-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+        "prooja dom seth"
+        "devn dom noah"
+        "media sath noah"
+        "media melissa melissa"
+        "brooke brooke clem";
+}
+
+.pooja {
+    grid-area: prooja;
+}
+
+.dom {
+    grid-area: dom;
+}
+
+.seth {
+    grid-area: seth;
+}
+
+.devn {
+    grid-area: devn;
+}
+
+.noah {
+    grid-area: noah;
+}
+
+.media {
+    grid-area: media;
+}
+
+.sath {
+    grid-area: sath;
+}
+
+.melissa {
+    grid-area: melissa;
+}
+
+.brooke {
+    grid-area: brooke;
+}
+
+.clem {
+    grid-area: clem;
+}
